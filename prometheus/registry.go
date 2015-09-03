@@ -384,7 +384,7 @@ func (r *registry) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	}
 	header := w.Header()
 	header.Set(contentTypeHeader, contentType)
-	header.Set(contentLengthHeader, fmt.Sprint(buf.Len()))
+	//header.Set(contentLengthHeader, fmt.Sprint(buf.Len()))
 	if encoding != "" {
 		header.Set(contentEncodingHeader, encoding)
 	}
